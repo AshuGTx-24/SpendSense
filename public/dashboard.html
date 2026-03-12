@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SpendSense Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<body>
+
+<div class="dashboard-container">
+
+<h1>📊 Expense Dashboard</h1>
+
+<div class="dashboard-buttons">
+
+<button onclick="loadExpenses()">Load Expenses</button>
+<button onclick="downloadExcel()">Download Excel</button>
+
+</div>
+
+<h2>Expense Breakdown</h2>
+
+<canvas id="expenseChart" width="400" height="200"></canvas>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Amount</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody id="expenseTable"></tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+<script>
+window.onload = function(){
+  loadExpenses();
+}
+</script>
+</body>
+
+</html>

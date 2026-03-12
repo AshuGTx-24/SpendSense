@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SpendSense</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="logo">💰 SpendSense</div>
+
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<h1>SpendSense</h1>
+
+<p class="tagline">Go Lavish – We got your tab!</p>
+
+<p class="subtitle">
+Track your daily expenses directly from WhatsApp
+</p>
+
+<div class="register-card">
+
+<input id="name" placeholder="Your Name">
+
+<input id="phone" placeholder="Phone Number (+91...)">
+
+<button onclick="register()">Register</button>
+
+<p id="message"></p>
+
+<div id="joinstep" class="join-step">
+<h3>Next Step</h3>
+<p>To activate the SpendSense whatsapp bot, click the button below or send the message <b>join musical-percent</b>
+to the number<b>+1 415 523 8886</b>
+</p>
+<a href="https://wa.me/14155238886?text=join%20musical-percent"
+target="_blank"
+class="whatsapp-btn"
+>
+Open WhatsApp and Join Bot
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Features -->
+
+<section id="features" class="features">
+
+<h2>Features</h2>
+
+<div class="feature-container">
+
+<div class="feature-card">
+<h3>📱 WhatsApp Expense Logging</h3>
+<p>Log expenses instantly by sending messages like "Food 200".</p>
+</div>
+
+<div class="feature-card">
+<h3>📊 Expense Dashboard</h3>
+<p>View all your expenses in a simple dashboard.</p>
+</div>
+
+<div class="feature-card">
+<h3>📁 Excel Reports</h3>
+<p>Download complete monthly expense reports in Excel.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- About Section -->
+
+<section id="about" class="about-section">
+
+<h2>About SpendSense</h2>
+
+<p>
+SpendSense is a smart expense tracking platform that allows users
+to record their daily expenses through WhatsApp messages.
+It removes the need for manual spreadsheets and makes
+expense tracking simple, fast, and accessible anywhere.
+</p>
+
+</section>
+
+<script src="script.js"></script>
+<script>
+
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 },
+    line_linked: {
+      enable: true,
+      distance: 150
+    }
+  }
+});
+
+</script>
+<div id="toast" class="toast"></div>
+</body>
+
+</html>
