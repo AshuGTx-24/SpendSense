@@ -206,6 +206,22 @@ Then use the generated **ngrok URL** in the Twilio console.
 
 ---
 
+🏗️ Architecture Diagram:
+Whatsapp Expense Log:
+<img width="846" height="646" alt="Whatsaap" src="https://github.com/user-attachments/assets/be38f67a-2e90-4624-98b2-f5286a3c94dc" />
+Webhook Hit:
+<img width="1148" height="577" alt="terminal" src="https://github.com/user-attachments/assets/31f21fc7-4981-4af4-b4fc-c79ab8850d67" />
+Ngrok Response:
+<img width="959" height="357" alt="ngrok" src="https://github.com/user-attachments/assets/b6c6988a-29cd-41d5-b777-f1a91ac7e77d" />
+Database:
+<img width="1298" height="441" alt="prisma_db" src="https://github.com/user-attachments/assets/1bd60666-6e77-46df-a92c-d505156285e3" />
+
+
+
+
+
+
+
 ## 👨‍💻 Author
 
 **Ashutosh Mohanty**
