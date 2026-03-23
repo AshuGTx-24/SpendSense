@@ -19,7 +19,7 @@ app.use(express.static("public"));
 //Mount Routes
 app.use("/api", authRoutes);
 app.use("/api", expenseRoutes);
-app.use("/webhook", whatsappRoutes);
+app.use("/whatsapp", whatsappRoutes);
 
 app.get("/", (req, res) => {
   res.send("SpendSense Backend Running 🚀");

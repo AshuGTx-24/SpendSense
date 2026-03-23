@@ -3,6 +3,6 @@ import { whatsappWebhook } from "../controllers/whatsapp.controller.js";
 
 const router = express.Router();
 
-router.post("/whatsapp", whatsappWebhook);
+router.post("/", whatsappWebhook);
 
 export default router;

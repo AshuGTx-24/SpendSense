@@ -206,6 +206,7 @@ Then use the generated **ngrok URL** in the Twilio console.
 
 ---
 
+
 🏗️ Architecture Diagram:
 Whatsapp Expense Log:
 <img width="846" height="646" alt="Whatsaap" src="https://github.com/user-attachments/assets/be38f67a-2e90-4624-98b2-f5286a3c94dc" />
@@ -222,6 +223,8 @@ Database:
 
 
 
+=======
+
 ## 👨‍💻 Author
 
 **Ashutosh Mohanty**
@@ -237,4 +240,31 @@ React.js • Node.js • JavaScript • APIs • Cloud
 If you found this project helpful, please consider **starring the repository** ⭐
 
 
+
+
+=======
+## 🏗️ Architecture Diagram
+
+```mermaid
+flowchart TD
+
+A[User sends message on WhatsApp] --> B[Twilio WhatsApp API]
+B --> C[Webhook Endpoint /whatsapp]
+C --> D[Express Server]
+D --> E[WhatsApp Controller]
+E --> F[Expense Parser Logic]
+F --> G[Prisma ORM]
+G --> H[(Database)]
+H --> I[Expense Records Stored]
+
+
+
+```markdown
+# 💰 SpendSense
+
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![Express](https://img.shields.io/badge/Express.js-Framework-black)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-blue)
+![Twilio](https://img.shields.io/badge/Twilio-WhatsApp%20API-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 

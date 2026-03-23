@@ -3,11 +3,18 @@ import prisma from "../config/prisma.js";
 export const whatsappWebhook = async (req, res) => {
   try {
 
+        console.log("🔥 Webhook HIT");
+    console.log("Raw Body:", req.body);
     const message = req.body.Body.trim().toLowerCase();
     const phone = req.body.From.replace("whatsapp:", "");
 
     console.log("Incoming message:", message);
     console.log("Phone:", phone);
+     if (!message || !phone) {
+      console.log("❌ Missing Body or From");
+      return res.send("Invalid request");
+    }
+
 
     let amount = null;
     let category = null;
@@ -46,9 +53,11 @@ export const whatsappWebhook = async (req, res) => {
         amount = Number(match[2]);
       }
     }
+    console.log("Parsed:", { amount, category });
 
     // If parsing fails
     if (!amount || !category) {
+      console.log("❌ Parsing failed");
       return res.send(`
 <Response>
 <Message>
@@ -67,8 +76,10 @@ Try formats like:
     const user = await prisma.user.findUnique({
       where: { phoneNumber: phone }
     });
+    console.log("User found:", user);
 
     if (!user) {
+      console.log("❌ User not found in DB");
       return res.send(`
 <Response>
 <Message>
@@ -88,6 +99,7 @@ Please register first on SpendSense website.
         date: new Date()
       }
     });
+    console.log("✅ Expense saved");
 
     return res.send(`
 <Response>
